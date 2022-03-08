@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -5,10 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ServiceService {
-  author:any;
-    constructor(private ss:ServiceService) { }
+  httpOptions:any;
+    constructor(private http:HttpClient) { }
   
     getAuthor():Observable<object>{
-      return this.ss.get("http://localhost:4500/services")
+      return this.http.get("http://localhost:4000/authorapi/books")
     }
 }

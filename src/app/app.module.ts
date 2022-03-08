@@ -13,11 +13,13 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     AuthorsComponent,
     BooksComponent,
-    HomeComponent
+    HomeComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
 
   ],
   providers: [],
